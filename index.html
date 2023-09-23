@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = {
+        name: "parth",
+      };
+      let user2 = {
+        name: "arjun",
+      };
+      localStorage.setItem("person", JSON.stringify(user));
+      localStorage.setItem("person2", JSON.stringify(user2));
+
+      let username = localStorage.getItem("user");
+
+      console.log(username);
+
+      sessionStorage.setItem("surname", "virani");
+      let sessionget = sessionStorage.getItem("surname");
+
+      console.log(sessionget);
+
+      
+      let data = {
+        feild: "bca",
+      };
+      let data1 = {
+        feild: "mca",
+      };
+      let data2 = {
+        feild: "bba",
+      };
+      let data3 = {
+        feild: "mba",
+      };
+
+      sessionStorage.setItem("feild", JSON.stringify(data));
+      sessionStorage.setItem("feild", JSON.stringify(data2));
+
+
+      let dataget1 = JSON.parse(sessionStorage.getItem("feild"))
+
+      console.log(dataget1);
+
+    </script>
+  </body>
+</html>
